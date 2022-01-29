@@ -20,6 +20,12 @@ public class MovieServiceController {
         return movieRepository.save(movie);
     }
 
+    @GetMapping("/")
+    public String getRoot() {
+        log.info("Get root");
+        return "Welcome to Movie-Service";
+    }
+
     @GetMapping("/movies/{id}")
     public Optional<Movie> getMovie(@PathVariable String id) {
         log.info("Retrieving movie: {}", id);
