@@ -12,5 +12,4 @@ public class MovieServiceApplication {
 		SpringApplication.run(MovieServiceApplication.class, args);
 		log.info("---------- Started Movie-Service Application ----------");
 	}
-
 }

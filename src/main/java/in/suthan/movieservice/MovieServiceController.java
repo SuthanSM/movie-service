@@ -9,6 +9,7 @@ import java.util.Optional;
 
 @Slf4j
 @RestController
+@RequestMapping("/v1")
 public class MovieServiceController {
 
     @Autowired
@@ -18,12 +19,6 @@ public class MovieServiceController {
     public Movie addMovie(@RequestBody Movie movie) {
         log.info("Saving movie: {}", movie);
         return movieRepository.save(movie);
-    }
-
-    @GetMapping("/")
-    public String getRoot() {
-        log.info("Get root");
-        return "Welcome to Movie-Service";
     }
 
     @GetMapping("/movies/{id}")
